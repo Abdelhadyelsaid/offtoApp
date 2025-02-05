@@ -1,3 +1,15 @@
 {
-  "hello": "مرحبا"
+  "flights": "طيران",
+  "packages": "الباقات",
+  "packagesPage": "صفحة الباقات",
+  "flightsPage": "صفحة الرحلات",
+  "searchTitle": "المغامرات العظيمة تبدأ من هنا ابحث عن الفندق!",
+  "searchHotels": "بحث عن فنادق",
+  "searchResultPage": "صفحة نتائج البحث",
+  "to": "إلي",
+  "selectDates": "حدد التواريخ",
+  "guests": "النزلاء",
+  "travelTo": "السفر إلي",
+  "searchHint": "اكتب اسم المدينة أو المطار"
+
 }

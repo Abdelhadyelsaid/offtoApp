@@ -22,6 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "hello": MessageLookupByLibrary.simpleMessage("Hello"),
-  };
+        "flights": MessageLookupByLibrary.simpleMessage("Flights"),
+        "flightsPage": MessageLookupByLibrary.simpleMessage("Flights Page"),
+        "guests": MessageLookupByLibrary.simpleMessage("Guests"),
+        "packages": MessageLookupByLibrary.simpleMessage("Packages"),
+        "packagesPage": MessageLookupByLibrary.simpleMessage("Packages Page"),
+        "searchHint": MessageLookupByLibrary.simpleMessage(
+            "Search for a city or airport name"),
+        "searchHotels":
+            MessageLookupByLibrary.simpleMessage("Search for hotels"),
+        "searchResultPage":
+            MessageLookupByLibrary.simpleMessage("Search Results Page"),
+        "searchTitle": MessageLookupByLibrary.simpleMessage(
+            "Great adventures start here, search for your hotel!"),
+        "selectDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "to": MessageLookupByLibrary.simpleMessage("To"),
+        "travelTo": MessageLookupByLibrary.simpleMessage("Travel To")
+      };
 }

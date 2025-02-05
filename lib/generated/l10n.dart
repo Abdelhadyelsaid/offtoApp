@@ -18,20 +18,17 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(
-      _current != null,
-      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
-    );
+    assert(_current != null,
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -44,10 +41,8 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(
-      instance != null,
-      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
-    );
+    assert(instance != null,
+        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
@@ -55,9 +50,124 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Hello`
-  String get hello {
-    return Intl.message('Hello', name: 'hello', desc: '', args: []);
+  /// `Flights`
+  String get flights {
+    return Intl.message(
+      'Flights',
+      name: 'flights',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Packages`
+  String get packages {
+    return Intl.message(
+      'Packages',
+      name: 'packages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Packages Page`
+  String get packagesPage {
+    return Intl.message(
+      'Packages Page',
+      name: 'packagesPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flights Page`
+  String get flightsPage {
+    return Intl.message(
+      'Flights Page',
+      name: 'flightsPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Great adventures start here, search for your hotel!`
+  String get searchTitle {
+    return Intl.message(
+      'Great adventures start here, search for your hotel!',
+      name: 'searchTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for hotels`
+  String get searchHotels {
+    return Intl.message(
+      'Search for hotels',
+      name: 'searchHotels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search Results Page`
+  String get searchResultPage {
+    return Intl.message(
+      'Search Results Page',
+      name: 'searchResultPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To`
+  String get to {
+    return Intl.message(
+      'To',
+      name: 'to',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Dates`
+  String get selectDates {
+    return Intl.message(
+      'Select Dates',
+      name: 'selectDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guests`
+  String get guests {
+    return Intl.message(
+      'Guests',
+      name: 'guests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Travel To`
+  String get travelTo {
+    return Intl.message(
+      'Travel To',
+      name: 'travelTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for a city or airport name`
+  String get searchHint {
+    return Intl.message(
+      'Search for a city or airport name',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
   }
 }
 

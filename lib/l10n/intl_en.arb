@@ -1,3 +1,14 @@
 {
-  "hello": "Hello"
+  "flights": "Flights",
+  "packages": "Packages",
+  "packagesPage": "Packages Page",
+  "flightsPage": "Flights Page",
+  "searchTitle": "Great adventures start here, search for your hotel!",
+  "searchHotels": "Search for hotels",
+  "searchResultPage": "Search Results Page",
+  "to": "To",
+  "selectDates": "Select Dates",
+  "guests": "Guests",
+  "travelTo": "Travel To",
+  "searchHint": "Search for a city or airport name"
 }
