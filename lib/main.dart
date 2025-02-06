@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Core/Helper/dio_helper.dart';
+import 'Core/Observers/bloc_observer.dart';
 import 'Core/Shared Cubit/Theme/theme_cubit.dart';
 import 'Features/Home/Bloc/home_cubit.dart';
 import 'Routing/router.dart';
@@ -10,6 +11,7 @@ import 'generated/l10n.dart';
 
 void main() async {
   await DioHelper.init();
+  Bloc.observer = MyBlocObserver();
   runApp(MyApp());
 }
 

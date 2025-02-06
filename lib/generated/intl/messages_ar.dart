@@ -29,14 +29,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "Thu": MessageLookupByLibrary.simpleMessage("الخميس"),
         "Tue": MessageLookupByLibrary.simpleMessage("الثلاثاء"),
         "Wed": MessageLookupByLibrary.simpleMessage("الأربعاء"),
+        "above": MessageLookupByLibrary.simpleMessage("أعلى من 11 سنة"),
+        "adult": MessageLookupByLibrary.simpleMessage("بالغ"),
+        "between": MessageLookupByLibrary.simpleMessage("من 2 إلى 11 سنة"),
+        "child": MessageLookupByLibrary.simpleMessage("طفل"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "departDate":
             MessageLookupByLibrary.simpleMessage("+ إضافة تاريخ االمغادرة"),
+        "done": MessageLookupByLibrary.simpleMessage("تم"),
         "flights": MessageLookupByLibrary.simpleMessage("طيران"),
         "flightsPage": MessageLookupByLibrary.simpleMessage("صفحة الرحلات"),
         "guests": MessageLookupByLibrary.simpleMessage("النزلاء"),
+        "infant": MessageLookupByLibrary.simpleMessage("رضيع"),
+        "less": MessageLookupByLibrary.simpleMessage("أقل من سنة واحدة"),
         "packages": MessageLookupByLibrary.simpleMessage("الباقات"),
         "packagesPage": MessageLookupByLibrary.simpleMessage("صفحة الباقات"),
+        "passengers_rooms":
+            MessageLookupByLibrary.simpleMessage("المسافرين والغرف"),
         "returnDate":
             MessageLookupByLibrary.simpleMessage("+ إضافة تاريخ العودة"),
         "searchHint":

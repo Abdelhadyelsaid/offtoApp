@@ -29,14 +29,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "Thu": MessageLookupByLibrary.simpleMessage("Thu"),
         "Tue": MessageLookupByLibrary.simpleMessage("Tue"),
         "Wed": MessageLookupByLibrary.simpleMessage("Wed"),
+        "above": MessageLookupByLibrary.simpleMessage("Above 11 Year"),
+        "adult": MessageLookupByLibrary.simpleMessage("Adult"),
+        "between": MessageLookupByLibrary.simpleMessage("2-11 Years"),
+        "child": MessageLookupByLibrary.simpleMessage("Child"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "departDate":
             MessageLookupByLibrary.simpleMessage("+ Add Departure Date"),
+        "done": MessageLookupByLibrary.simpleMessage("Done"),
         "flights": MessageLookupByLibrary.simpleMessage("Flights"),
         "flightsPage": MessageLookupByLibrary.simpleMessage("Flights Page"),
         "guests": MessageLookupByLibrary.simpleMessage("Guests"),
+        "infant": MessageLookupByLibrary.simpleMessage("Infant"),
+        "less": MessageLookupByLibrary.simpleMessage("Less than 1 Year"),
         "packages": MessageLookupByLibrary.simpleMessage("Packages"),
         "packagesPage": MessageLookupByLibrary.simpleMessage("Packages Page"),
+        "passengers_rooms":
+            MessageLookupByLibrary.simpleMessage("Passengers & Rooms"),
         "returnDate": MessageLookupByLibrary.simpleMessage("+ Add Return Date"),
         "searchHint": MessageLookupByLibrary.simpleMessage(
             "Search for a city or airport name"),

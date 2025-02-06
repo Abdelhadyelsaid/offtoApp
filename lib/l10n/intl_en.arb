@@ -21,5 +21,13 @@
   "Fri": "Fri",
   "Sat": "Sat",
   "returnDate": "+ Add Return Date",
-  "departDate": "+ Add Departure Date"
+  "departDate": "+ Add Departure Date",
+  "passengers_rooms": "Passengers & Rooms",
+  "done": "Done",
+  "adult": "Adult",
+  "child": "Child",
+  "infant": "Infant",
+  "above": "Above 11 Year",
+  "less": "Less than 1 Year",
+  "between": "2-11 Years"
 }

@@ -279,6 +279,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Passengers & Rooms`
+  String get passengers_rooms {
+    return Intl.message(
+      'Passengers & Rooms',
+      name: 'passengers_rooms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get done {
+    return Intl.message(
+      'Done',
+      name: 'done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adult`
+  String get adult {
+    return Intl.message(
+      'Adult',
+      name: 'adult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Child`
+  String get child {
+    return Intl.message(
+      'Child',
+      name: 'child',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Infant`
+  String get infant {
+    return Intl.message(
+      'Infant',
+      name: 'infant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Above 11 Year`
+  String get above {
+    return Intl.message(
+      'Above 11 Year',
+      name: 'above',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Less than 1 Year`
+  String get less {
+    return Intl.message(
+      'Less than 1 Year',
+      name: 'less',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `2-11 Years`
+  String get between {
+    return Intl.message(
+      '2-11 Years',
+      name: 'between',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
