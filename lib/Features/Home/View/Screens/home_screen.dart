@@ -7,9 +7,10 @@ import '../../../../Core/Const/colors.dart';
 import '../../../../Routing/routes.dart';
 import '../../../../generated/l10n.dart';
 import '../Widgets/button_widget.dart';
-import '../Widgets/citySelector_widget.dart';
+import '../Widgets/Selector_widget.dart';
 import '../Widgets/city_search_widget.dart';
 import '../Widgets/packages_widget.dart';
+import '../Widgets/select_dates_widget.dart';
 import '../Widgets/textForm_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 15.h,
                 ),
-                CitySelectorWidget(
+                SelectorWidget(
                   hintText: tr.to,
                   selectedText: cubit.toText, // Replace with your dynamic data
                   bottomSheet: BlocProvider.value(
@@ -78,10 +79,24 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 15.h,
                 ),
-                DefaultTextFormField(
-                  controller: cubit.datesController,
+                SelectorWidget(
                   hintText: tr.selectDates,
-                  enabled: false,
+                  selectedText: cubit.departController.text.isNotEmpty &&
+                          cubit.arriveController.text.isNotEmpty
+                      ? "${cubit.departController.text} ${tr.to} ${cubit.arriveController.text}"
+                      : "",
+                  bottomSheet: BlocProvider.value(
+                    value: cubit,
+                    child: FractionallySizedBox(
+                      heightFactor: 0.85,
+                      child: DatePickerBottomSheet(
+                        onDatesSelected: (departDate, arriveDate) {
+                          print('Depart: $departDate, Arrive: $arriveDate');
+                        },
+                      ),
+                    ),
+                  ),
+                  onFetchCities: () {},
                 ),
                 SizedBox(
                   height: 15.h,

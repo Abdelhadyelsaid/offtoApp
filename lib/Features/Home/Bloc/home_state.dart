@@ -20,4 +20,5 @@ final class GetCitiesErrorState extends HomeState {
   GetCitiesErrorState(this.errorMessage);
 }
 final class HomeUpdateTextState extends HomeState {}
+final class HomeUpdateDateState extends HomeState {}
 

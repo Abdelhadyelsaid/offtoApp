@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CitySelectorWidget extends StatelessWidget {
+class SelectorWidget extends StatelessWidget {
   final String hintText;
   final String? selectedText;
   final Widget bottomSheet;
   final VoidCallback onFetchCities;
 
-  const CitySelectorWidget({
+  const SelectorWidget({
     Key? key,
     required this.hintText,
     this.selectedText,

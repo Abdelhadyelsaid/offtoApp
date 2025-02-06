@@ -169,6 +169,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Travel Dates`
+  String get travelDates {
+    return Intl.message(
+      'Travel Dates',
+      name: 'travelDates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sun`
+  String get Sun {
+    return Intl.message(
+      'Sun',
+      name: 'Sun',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mon`
+  String get Mon {
+    return Intl.message(
+      'Mon',
+      name: 'Mon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tue`
+  String get Tue {
+    return Intl.message(
+      'Tue',
+      name: 'Tue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wed`
+  String get Wed {
+    return Intl.message(
+      'Wed',
+      name: 'Wed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thu`
+  String get Thu {
+    return Intl.message(
+      'Thu',
+      name: 'Thu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fri`
+  String get Fri {
+    return Intl.message(
+      'Fri',
+      name: 'Fri',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sat`
+  String get Sat {
+    return Intl.message(
+      'Sat',
+      name: 'Sat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ Add Return Date`
+  String get returnDate {
+    return Intl.message(
+      '+ Add Return Date',
+      name: 'returnDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `+ Add Departure Date`
+  String get departDate {
+    return Intl.message(
+      '+ Add Departure Date',
+      name: 'departDate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

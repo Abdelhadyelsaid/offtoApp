@@ -22,11 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Fri": MessageLookupByLibrary.simpleMessage("Fri"),
+        "Mon": MessageLookupByLibrary.simpleMessage("Mon"),
+        "Sat": MessageLookupByLibrary.simpleMessage("Sat"),
+        "Sun": MessageLookupByLibrary.simpleMessage("Sun"),
+        "Thu": MessageLookupByLibrary.simpleMessage("Thu"),
+        "Tue": MessageLookupByLibrary.simpleMessage("Tue"),
+        "Wed": MessageLookupByLibrary.simpleMessage("Wed"),
+        "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+        "departDate":
+            MessageLookupByLibrary.simpleMessage("+ Add Departure Date"),
         "flights": MessageLookupByLibrary.simpleMessage("Flights"),
         "flightsPage": MessageLookupByLibrary.simpleMessage("Flights Page"),
         "guests": MessageLookupByLibrary.simpleMessage("Guests"),
         "packages": MessageLookupByLibrary.simpleMessage("Packages"),
         "packagesPage": MessageLookupByLibrary.simpleMessage("Packages Page"),
+        "returnDate": MessageLookupByLibrary.simpleMessage("+ Add Return Date"),
         "searchHint": MessageLookupByLibrary.simpleMessage(
             "Search for a city or airport name"),
         "searchHotels":
@@ -37,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Great adventures start here, search for your hotel!"),
         "selectDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
         "to": MessageLookupByLibrary.simpleMessage("To"),
+        "travelDates": MessageLookupByLibrary.simpleMessage("Travel Dates"),
         "travelTo": MessageLookupByLibrary.simpleMessage("Travel To")
       };
 }

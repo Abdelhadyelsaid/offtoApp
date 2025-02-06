@@ -17,13 +17,35 @@ class HomeCubit extends Cubit<HomeState> {
   final SearchRepo _searchRepo = SearchRepo();
 
   final TextEditingController searchController = TextEditingController();
-  String toText="";
+  final TextEditingController arriveController = TextEditingController();
+  final TextEditingController departController = TextEditingController();
+  final TextEditingController guestsController = TextEditingController();
+
+  String toText = "";
+
   void setToText(String value) {
     toText = value;
-    emit(HomeUpdateTextState()); // Emit a state to trigger UI rebuild
+    emit(HomeUpdateTextState());
   }
-  final TextEditingController datesController = TextEditingController();
-  final TextEditingController guestsController = TextEditingController();
+  int calculateMonthCount(DateTime now, DateTime endDate) {
+    return (endDate.year - now.year) * 12 + (endDate.month - now.month) + 1;
+  }
+  int daysInMonth(DateTime month) {
+    return DateTime(month.year, month.month + 1, 0).day;
+  }
+
+  DateTime firstDayOfMonth(DateTime month) {
+    return DateTime(month.year, month.month, 1);
+  }
+
+  bool isSameDay(DateTime a, DateTime b) {
+    return a.year == b.year && a.month == b.month && a.day == b.day;
+  }
+  void setTravelDate(String arrive, String depart) {
+    arriveController.text = arrive;
+    departController.text = depart;
+    emit(HomeUpdateDateState());
+  }
 
   SearchModel? searchModel;
 

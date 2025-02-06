@@ -9,6 +9,7 @@ class DefaultTextFormField extends StatelessWidget {
   final double? width;
   final Color fillcolor;
   final String hintText;
+  final String labelText;
   final Function(String)? onChanged;
   final Function()? onTap;
   final TextAlign? textAlign;
@@ -27,7 +28,12 @@ class DefaultTextFormField extends StatelessWidget {
     this.onChanged,
     this.fillcolor = Colors.white,
     this.hintText = '',
-    this.textAlign, this.onTap, required this.enabled, this.prefixIcon,  this.borderRaduis=6,
+    this.textAlign,
+    this.onTap,
+    required this.enabled,
+    this.prefixIcon,
+    this.borderRaduis = 6,
+    this.labelText = '',
   }) : super(key: key);
 
   @override
@@ -40,8 +46,15 @@ class DefaultTextFormField extends StatelessWidget {
         onChanged: onChanged,
         textDirection: textDirection,
         controller: controller,
+        style: TextStyle(
+          color: Colors.black,  // Set the text color to black
+        ),
+
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
           hintText: hintText,
+          labelText: labelText,
+          floatingLabelBehavior: FloatingLabelBehavior.always,
           prefixText: prefixText,
           suffixText: suffixText,
           fillColor: fillcolor,
@@ -50,12 +63,16 @@ class DefaultTextFormField extends StatelessWidget {
           suffixStyle: const TextStyle(color: Colors.grey, fontSize: 16),
           prefixStyle: const TextStyle(color: Colors.grey, fontSize: 16),
           hintStyle: TextStyle(
-              color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
+              color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
+            labelStyle: TextStyle(
+              fontSize: 16, // Adjust label font size
+              color: Colors.black, // Adjust label color
+            ),
+
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRaduis),
             borderSide: BorderSide(
-                color: Colors.grey
-                    .withOpacity(0.7)), // Changed to grey color
+                color: Colors.grey.withOpacity(0.7)), // Changed to grey color
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRaduis),

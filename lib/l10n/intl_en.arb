@@ -10,5 +10,16 @@
   "selectDates": "Select Dates",
   "guests": "Guests",
   "travelTo": "Travel To",
-  "searchHint": "Search for a city or airport name"
+  "searchHint": "Search for a city or airport name",
+  "travelDates": "Travel Dates",
+  "confirm": "Confirm",
+  "Sun": "Sun",
+  "Mon": "Mon",
+  "Tue": "Tue",
+  "Wed": "Wed",
+  "Thu": "Thu",
+  "Fri": "Fri",
+  "Sat": "Sat",
+  "returnDate": "+ Add Return Date",
+  "departDate": "+ Add Departure Date"
 }

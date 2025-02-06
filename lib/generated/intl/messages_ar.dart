@@ -22,11 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Fri": MessageLookupByLibrary.simpleMessage("الجمعة"),
+        "Mon": MessageLookupByLibrary.simpleMessage("الإثنين"),
+        "Sat": MessageLookupByLibrary.simpleMessage("السبت"),
+        "Sun": MessageLookupByLibrary.simpleMessage("الأحد"),
+        "Thu": MessageLookupByLibrary.simpleMessage("الخميس"),
+        "Tue": MessageLookupByLibrary.simpleMessage("الثلاثاء"),
+        "Wed": MessageLookupByLibrary.simpleMessage("الأربعاء"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "departDate":
+            MessageLookupByLibrary.simpleMessage("+ إضافة تاريخ االمغادرة"),
         "flights": MessageLookupByLibrary.simpleMessage("طيران"),
         "flightsPage": MessageLookupByLibrary.simpleMessage("صفحة الرحلات"),
         "guests": MessageLookupByLibrary.simpleMessage("النزلاء"),
         "packages": MessageLookupByLibrary.simpleMessage("الباقات"),
         "packagesPage": MessageLookupByLibrary.simpleMessage("صفحة الباقات"),
+        "returnDate":
+            MessageLookupByLibrary.simpleMessage("+ إضافة تاريخ العودة"),
         "searchHint":
             MessageLookupByLibrary.simpleMessage("اكتب اسم المدينة أو المطار"),
         "searchHotels": MessageLookupByLibrary.simpleMessage("بحث عن فنادق"),
@@ -36,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "المغامرات العظيمة تبدأ من هنا ابحث عن الفندق!"),
         "selectDates": MessageLookupByLibrary.simpleMessage("حدد التواريخ"),
         "to": MessageLookupByLibrary.simpleMessage("إلي"),
+        "travelDates": MessageLookupByLibrary.simpleMessage("تواريخ السفر"),
         "travelTo": MessageLookupByLibrary.simpleMessage("السفر إلي")
       };
 }
