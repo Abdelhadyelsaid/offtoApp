@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DefaultTextFormField extends StatelessWidget {
-  final String? prefixText;
-  final String? suffixText;
   final TextEditingController? controller;
-  final TextDirection? textDirection;
   final double? height;
   final double? width;
   final Color fillcolor;
@@ -19,10 +16,7 @@ class DefaultTextFormField extends StatelessWidget {
 
   DefaultTextFormField({
     Key? key,
-    this.prefixText,
     this.controller,
-    this.textDirection,
-    this.suffixText,
     this.height,
     this.width,
     this.onChanged,
@@ -44,19 +38,15 @@ class DefaultTextFormField extends StatelessWidget {
         textAlign: textAlign ?? TextAlign.start,
         enabled: enabled,
         onChanged: onChanged,
-        textDirection: textDirection,
         controller: controller,
         style: TextStyle(
-          color: Colors.black,  // Set the text color to black
+          color: Colors.black,
         ),
-
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
           hintText: hintText,
           labelText: labelText,
           floatingLabelBehavior: FloatingLabelBehavior.always,
-          prefixText: prefixText,
-          suffixText: suffixText,
           fillColor: fillcolor,
           prefixIcon: prefixIcon,
           filled: true,
@@ -64,25 +54,21 @@ class DefaultTextFormField extends StatelessWidget {
           prefixStyle: const TextStyle(color: Colors.grey, fontSize: 16),
           hintStyle: TextStyle(
               color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
-            labelStyle: TextStyle(
-              fontSize: 16, // Adjust label font size
-              color: Colors.black, // Adjust label color
-            ),
-
+          labelStyle: TextStyle(
+            fontSize: 16, // Adjust label font size
+            color: Colors.black, // Adjust label color
+          ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRaduis),
-            borderSide: BorderSide(
-                color: Colors.grey.withOpacity(0.7)), // Changed to grey color
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.7)),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRaduis),
-            borderSide: BorderSide(
-                color: Colors.grey.shade200), // Changed to grey color
+            borderSide: BorderSide(color: Colors.grey.shade200),
           ),
           disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRaduis),
-            borderSide: BorderSide(
-                color: Colors.grey.withOpacity(0.2)), // Changed to grey color
+            borderSide: BorderSide(color: Colors.grey.withOpacity(0.2)),
           ),
         ),
       ),

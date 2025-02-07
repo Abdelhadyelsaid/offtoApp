@@ -41,20 +41,21 @@ class CitySearchBottomSheet extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                DefaultTextFormField(
-                  controller: cubit.searchController,
-                  enabled: true,
-                  hintText: tr.searchHint,
-                  fillcolor: Colors.grey.shade200,
-                  borderRaduis: 15,
-                  onChanged: (query) {
-                    context.read<HomeCubit>().getCities(search: query);
-                  },
-                  prefixIcon: const Icon(
-                    Icons.search,
-                    color: Colors.grey,
-                  ),
+              DefaultTextFormField(
+                controller: cubit.searchController,
+                enabled: true,
+                hintText: tr.searchHint,
+                fillcolor: Colors.grey.shade200,
+                borderRaduis: 15,
+                onChanged: (query) {
+                  context.read<HomeCubit>().getCities(
+                      search: query, lang: cubit.currentLanguage);
+                },
+                prefixIcon: const Icon(
+                  Icons.search,
+                  color: Colors.grey,
                 ),
+              ),
                 const SizedBox(height: 10),
                 state is GetCitiesLoadingState || cubit.searchModel == null
                     ? Center(

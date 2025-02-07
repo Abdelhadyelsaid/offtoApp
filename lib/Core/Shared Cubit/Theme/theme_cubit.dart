@@ -13,7 +13,7 @@ class ThemeCubit extends Cubit<ThemeState> {
 
   static ThemeCubit get(context) => BlocProvider.of(context);
 
-  bool isLight = false;
+  bool isLight = true;
 
   void changeTheme() {
     isLight = !isLight;
@@ -24,11 +24,4 @@ class ThemeCubit extends Cubit<ThemeState> {
     }
   }
 
-  ///*************** Change Language ***************///
-  String currentLanguage = 'ar';
-
-  void toggleLanguage() {
-    currentLanguage = currentLanguage == 'ar' ? 'en' : 'ar';
-    emit(ChangeLanguageState(Locale(currentLanguage)));
-  }
 }

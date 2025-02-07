@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl/intl.dart';
 import 'package:offto/Core/Const/colors.dart';
 import 'package:offto/Features/Home/View/Widgets/button_widget.dart';
 import 'package:offto/Features/Home/View/Widgets/textForm_widget.dart';
@@ -10,9 +9,9 @@ import '../../Bloc/home_cubit.dart';
 import 'calenderWidget.dart';
 
 class DatePickerBottomSheet extends StatelessWidget {
-  final Function(DateTime?, DateTime?) onDatesSelected;
 
-  const DatePickerBottomSheet({Key? key, required this.onDatesSelected})
+
+  const DatePickerBottomSheet({Key? key,})
       : super(key: key);
 
   @override
@@ -58,7 +57,7 @@ class DatePickerBottomSheet extends StatelessWidget {
                 children: [
                   Expanded(
                     child: DefaultTextFormField(
-                      labelText: 'Depart',
+                      labelText: tr.depart,
                       controller: cubit.departController,
                       enabled: false,
                       hintText: tr.departDate,
@@ -73,7 +72,7 @@ class DatePickerBottomSheet extends StatelessWidget {
                   SizedBox(width: 10.w),
                   Expanded(
                     child: DefaultTextFormField(
-                      labelText: 'Arrive',
+                      labelText: tr.return_text,
                       controller: cubit.arriveController,
                       enabled: false,
                       hintText: tr.returnDate,
@@ -106,16 +105,7 @@ class DatePickerBottomSheet extends StatelessWidget {
                 textSize: 20,
                 borderRadius: BorderRadius.circular(10),
                 onTap: () {
-                  if (cubit.departController.text.isNotEmpty &&
-                      cubit.arriveController.text.isNotEmpty) {
-                    onDatesSelected(
-                      DateFormat('dd MMM. yy')
-                          .parse(cubit.departController.text),
-                      DateFormat('dd MMM. yy')
-                          .parse(cubit.arriveController.text),
-                    );
-                    Navigator.pop(context);
-                  }
+                  Navigator.pop(context);
                 },
                 height: 55.h,
                 color: cubit.departController.text.isEmpty ||

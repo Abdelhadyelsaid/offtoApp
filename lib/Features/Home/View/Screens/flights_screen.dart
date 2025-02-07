@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:offto/Core/Const/colors.dart';
-
 import '../../../../generated/l10n.dart';
 
 class FlightsScreen extends StatelessWidget {

@@ -26,7 +26,7 @@ class DioHelper {
     dio!.options.headers = headers ??
         {
           'Content-Type': 'application/json',
-          'Accept-Language': "en",
+          'Accept-Language': lang,
           'Accept': 'application/json',
         };
     return dio!.post(

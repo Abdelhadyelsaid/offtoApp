@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:offto/Core/Const/colors.dart';
 import 'Core/Helper/dio_helper.dart';
 import 'Core/Observers/bloc_observer.dart';
 import 'Core/Shared Cubit/Theme/theme_cubit.dart';
@@ -30,25 +31,34 @@ class MyApp extends StatelessWidget {
               BlocProvider(create: (context) => HomeCubit()),
               BlocProvider(create: (context) => ThemeCubit()),
             ],
-            child: BlocBuilder<ThemeCubit, ThemeState>(
-              builder: (context, state) {
-                return MaterialApp.router(
-                  debugShowCheckedModeBanner: false,
-                  theme: ThemeData(
-                    brightness:
-                        state is ThemeDark ? Brightness.dark : Brightness.light,
-                    useMaterial3: false,
-                  ),
-                  localizationsDelegates: const [
-                    S.delegate,
-                    GlobalMaterialLocalizations.delegate,
-                    GlobalWidgetsLocalizations.delegate,
-                    GlobalCupertinoLocalizations.delegate,
-                  ],
-                  supportedLocales: S.delegate.supportedLocales,
-                  // state is ChangeLanguageState ? state.locale :
-                  locale: Locale('en'),
-                  routerConfig: CustomRouter.router,
+            child: BlocBuilder<HomeCubit, HomeState>(
+              builder: (context, homeState) {
+                return BlocBuilder<ThemeCubit, ThemeState>(
+                  builder: (context, state) {
+                    return MaterialApp.router(
+                      debugShowCheckedModeBanner: false,
+                      theme: ThemeData(
+                        scaffoldBackgroundColor: state is ThemeDark
+                            ? Colors.grey[900]
+                            : backgroundColor,
+                        brightness: state is ThemeDark
+                            ? Brightness.dark
+                            : Brightness.light,
+                        useMaterial3: false,
+                      ),
+                      localizationsDelegates: const [
+                        S.delegate,
+                        GlobalMaterialLocalizations.delegate,
+                        GlobalWidgetsLocalizations.delegate,
+                        GlobalCupertinoLocalizations.delegate,
+                      ],
+                      supportedLocales: S.delegate.supportedLocales,
+                      locale: homeState is ChangeLanguageState
+                          ? homeState.locale
+                          : null,
+                      routerConfig: CustomRouter.router,
+                    );
+                  },
                 );
               },
             ),

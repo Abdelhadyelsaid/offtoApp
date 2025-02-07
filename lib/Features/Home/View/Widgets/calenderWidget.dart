@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
-
 import '../../../../Core/Const/colors.dart';
 import '../../../../generated/l10n.dart';
 import '../../Bloc/home_cubit.dart';

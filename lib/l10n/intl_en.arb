@@ -27,7 +27,20 @@
   "adult": "Adult",
   "child": "Child",
   "infant": "Infant",
+  "adults": "Adults",
+  "children": "Children",
+  "infants": "Infants",
   "above": "Above 11 Year",
   "less": "Less than 1 Year",
-  "between": "2-11 Years"
+  "between": "2-11 Years",
+  "language": "Change language",
+  "theme": "Change theme",
+  "light": "Light",
+  "dark": "Dark",
+  "arabic": "Arabic",
+  "english": "English",
+  "room": "Room",
+  "addRoom": "Add another room",
+  "depart": "Depart",
+  "return_text": "Return"
 }

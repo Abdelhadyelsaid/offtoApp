@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:offto/Core/Shared%20Cubit/Theme/theme_cubit.dart';
 
 class SelectorWidget extends StatelessWidget {
   final String hintText;
@@ -16,6 +18,8 @@ class SelectorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return BlocBuilder<ThemeCubit, ThemeState>(
+  builder: (context, state) {
     return GestureDetector(
       onTap: () {
         onFetchCities();
@@ -23,7 +27,7 @@ class SelectorWidget extends StatelessWidget {
           context: context,
           useSafeArea: true,
           isScrollControlled: true,
-          backgroundColor: Colors.white,
+          backgroundColor:state is ThemeDark ? Colors.grey[900] : Colors.white,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
           ),
@@ -71,5 +75,7 @@ class SelectorWidget extends StatelessWidget {
         ],
       ),
     );
+  },
+);
   }
 }

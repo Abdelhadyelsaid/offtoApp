@@ -8,3 +8,5 @@ Color closeColor =const  Color(0xffc14c4c);
 Color selectedColor =const  Color(0xff29b99e);
 Color highlightedColor =const  Color(0xffe4f4f1);
 Color regularColor =const  Color(0xfffffbfe);
+Color minusColor =const  Color(0xffcbe8f9);
+Color backColor =const  Color(0xfff2f7fa);

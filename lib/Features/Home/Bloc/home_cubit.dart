@@ -12,8 +12,7 @@ part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial()) {
-
-    rooms.add(Room(adults: 1, children: 0, infants: 0)); // Default room
+    rooms.add(Room(adults: 1, children: 0, infants: 0));
   }
 
   static HomeCubit get(context) => BlocProvider.of(context);
@@ -55,22 +54,30 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   List<Room> rooms = [];
+  String guestSummary = "";
 
-  // Add a room with default values
+  void updateSummary(String value) {
+    guestSummary = value;
+    emit(GuestsUpdatedState());
+  }
+
+  /// add and remove functions for rooms
+
   void addRoom() {
     if (rooms.length < 4) {
-      rooms.add(Room(adults: 1, children: 0, infants: 0)); // Default values
+      rooms.add(Room(adults: 1, children: 0, infants: 0));
       emit(HomeUpdateCounterState());
     }
   }
+
   void removeRoom(int roomIndex) {
-    if (rooms.length > 1) { // Prevent removing the last room
+    if (rooms.length > 1) {
       rooms.removeAt(roomIndex);
       emit(HomeUpdateCounterState());
     }
   }
 
-  // Increment and decrement functions for adults in a specific room
+  /// Increment and decrement functions for adults
   void incrementAdult(int roomIndex) {
     if (rooms[roomIndex].adults < 6) {
       rooms[roomIndex].adults++;
@@ -85,7 +92,7 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  // Increment and decrement functions for children in a specific room
+  /// Increment and decrement functions for children
   void incrementChild(int roomIndex) {
     if (rooms[roomIndex].children < 4) {
       rooms[roomIndex].children++;
@@ -100,7 +107,7 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  // Increment and decrement functions for infants in a specific room
+  /// Increment and decrement functions for infants
   void incrementInfant(int roomIndex) {
     if (rooms[roomIndex].infants < 4) {
       rooms[roomIndex].infants++;
@@ -115,17 +122,38 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  SearchModel? searchModel;
 
-  // Function to fetch cities
-  Future<void> getCities({String? search}) async {
+
+  /// Function to fetch cities
+  SearchModel? searchModel;
+  Future<void> getCities({String? search, String? lang}) async {
     try {
       emit(GetCitiesLoadingState());
-      searchModel = await _searchRepo.getCities(search: search);
+      searchModel = await _searchRepo.getCities(search: search, lang: lang);
       emit(GetCitiesSuccessState(searchModel!));
     } catch (e) {
       log('error getting cities data $e');
       emit(GetCitiesErrorState(e.toString()));
     }
+  }
+
+  ///Clear values
+  void clearValues() {
+    departController.clear();
+    arriveController.clear();
+    toText = "";
+    guestSummary = "";
+    rooms.clear();
+    addRoom();
+    emit(HomeInitial());
+  }
+
+
+  ///*************** Change Language ***************///
+  String currentLanguage = 'en';
+
+  void toggleLanguage() {
+    currentLanguage = currentLanguage == 'ar' ? 'en' : 'ar';
+    emit(ChangeLanguageState(Locale(currentLanguage)));
   }
 }

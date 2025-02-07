@@ -7,8 +7,8 @@ import 'package:offto/Features/Home/Data/search_services.dart';
 class SearchRepo {
   final SearchServices _searchServices = SearchServices();
 
-  Future<SearchModel> getCities({String? search}) async {
-    Response response = await _searchServices.getCities(search: search);
+  Future<SearchModel> getCities({String? search,String? lang}) async {
+    Response response = await _searchServices.getCities(search: search,lang: lang);
     log(response.data.toString());
     if (response.statusCode != 200) {
       throw Exception('Failed to get cities: ${response.data}');

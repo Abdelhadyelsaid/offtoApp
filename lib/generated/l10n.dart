@@ -18,17 +18,20 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name =
+        (locale.countryCode?.isEmpty ?? false)
+            ? locale.languageCode
+            : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -41,8 +44,10 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -52,22 +57,12 @@ class S {
 
   /// `Flights`
   String get flights {
-    return Intl.message(
-      'Flights',
-      name: 'flights',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Flights', name: 'flights', desc: '', args: []);
   }
 
   /// `Packages`
   String get packages {
-    return Intl.message(
-      'Packages',
-      name: 'packages',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Packages', name: 'packages', desc: '', args: []);
   }
 
   /// `Packages Page`
@@ -122,12 +117,7 @@ class S {
 
   /// `To`
   String get to {
-    return Intl.message(
-      'To',
-      name: 'to',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('To', name: 'to', desc: '', args: []);
   }
 
   /// `Select Dates`
@@ -142,22 +132,12 @@ class S {
 
   /// `Guests`
   String get guests {
-    return Intl.message(
-      'Guests',
-      name: 'guests',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Guests', name: 'guests', desc: '', args: []);
   }
 
   /// `Travel To`
   String get travelTo {
-    return Intl.message(
-      'Travel To',
-      name: 'travelTo',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Travel To', name: 'travelTo', desc: '', args: []);
   }
 
   /// `Search for a city or airport name`
@@ -182,82 +162,42 @@ class S {
 
   /// `Confirm`
   String get confirm {
-    return Intl.message(
-      'Confirm',
-      name: 'confirm',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
   }
 
   /// `Sun`
   String get Sun {
-    return Intl.message(
-      'Sun',
-      name: 'Sun',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sun', name: 'Sun', desc: '', args: []);
   }
 
   /// `Mon`
   String get Mon {
-    return Intl.message(
-      'Mon',
-      name: 'Mon',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Mon', name: 'Mon', desc: '', args: []);
   }
 
   /// `Tue`
   String get Tue {
-    return Intl.message(
-      'Tue',
-      name: 'Tue',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Tue', name: 'Tue', desc: '', args: []);
   }
 
   /// `Wed`
   String get Wed {
-    return Intl.message(
-      'Wed',
-      name: 'Wed',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Wed', name: 'Wed', desc: '', args: []);
   }
 
   /// `Thu`
   String get Thu {
-    return Intl.message(
-      'Thu',
-      name: 'Thu',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Thu', name: 'Thu', desc: '', args: []);
   }
 
   /// `Fri`
   String get Fri {
-    return Intl.message(
-      'Fri',
-      name: 'Fri',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Fri', name: 'Fri', desc: '', args: []);
   }
 
   /// `Sat`
   String get Sat {
-    return Intl.message(
-      'Sat',
-      name: 'Sat',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Sat', name: 'Sat', desc: '', args: []);
   }
 
   /// `+ Add Return Date`
@@ -292,72 +232,112 @@ class S {
 
   /// `Done`
   String get done {
-    return Intl.message(
-      'Done',
-      name: 'done',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Done', name: 'done', desc: '', args: []);
   }
 
   /// `Adult`
   String get adult {
-    return Intl.message(
-      'Adult',
-      name: 'adult',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Adult', name: 'adult', desc: '', args: []);
   }
 
   /// `Child`
   String get child {
-    return Intl.message(
-      'Child',
-      name: 'child',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Child', name: 'child', desc: '', args: []);
   }
 
   /// `Infant`
   String get infant {
-    return Intl.message(
-      'Infant',
-      name: 'infant',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Infant', name: 'infant', desc: '', args: []);
+  }
+
+  /// `Adults`
+  String get adults {
+    return Intl.message('Adults', name: 'adults', desc: '', args: []);
+  }
+
+  /// `Children`
+  String get children {
+    return Intl.message('Children', name: 'children', desc: '', args: []);
+  }
+
+  /// `Infants`
+  String get infants {
+    return Intl.message('Infants', name: 'infants', desc: '', args: []);
   }
 
   /// `Above 11 Year`
   String get above {
-    return Intl.message(
-      'Above 11 Year',
-      name: 'above',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Above 11 Year', name: 'above', desc: '', args: []);
   }
 
   /// `Less than 1 Year`
   String get less {
+    return Intl.message('Less than 1 Year', name: 'less', desc: '', args: []);
+  }
+
+  /// `2-11 Years`
+  String get between {
+    return Intl.message('2-11 Years', name: 'between', desc: '', args: []);
+  }
+
+  /// `Change language`
+  String get language {
     return Intl.message(
-      'Less than 1 Year',
-      name: 'less',
+      'Change language',
+      name: 'language',
       desc: '',
       args: [],
     );
   }
 
-  /// `2-11 Years`
-  String get between {
+  /// `Change theme`
+  String get theme {
+    return Intl.message('Change theme', name: 'theme', desc: '', args: []);
+  }
+
+  /// `Light`
+  String get light {
+    return Intl.message('Light', name: 'light', desc: '', args: []);
+  }
+
+  /// `Dark`
+  String get dark {
+    return Intl.message('Dark', name: 'dark', desc: '', args: []);
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message('Arabic', name: 'arabic', desc: '', args: []);
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message('English', name: 'english', desc: '', args: []);
+  }
+
+  /// `Room`
+  String get room {
+    return Intl.message('Room', name: 'room', desc: '', args: []);
+  }
+
+  /// `Add another room`
+  String get addRoom {
     return Intl.message(
-      '2-11 Years',
-      name: 'between',
+      'Add another room',
+      name: 'addRoom',
       desc: '',
       args: [],
     );
+  }
+
+  /// `Depart`
+  String get depart {
+    return Intl.message('Depart', name: 'depart', desc: '', args: []);
+  }
+
+  /// `Return`
+  String get return_text {
+    return Intl.message('Return', name: 'return_text', desc: '', args: []);
   }
 }
 

@@ -5,6 +5,7 @@ sealed class HomeState {}
 
 final class HomeInitial extends HomeState {}
 
+///Get cities States
 final class GetCitiesLoadingState extends HomeState {}
 
 final class GetCitiesSuccessState extends HomeState {
@@ -24,3 +25,12 @@ final class HomeUpdateTextState extends HomeState {}
 final class HomeUpdateDateState extends HomeState {}
 
 final class HomeUpdateCounterState extends HomeState {}
+
+final class GuestsUpdatedState extends HomeState {}
+
+/// Change Language State
+class ChangeLanguageState extends HomeState {
+  final Locale locale;
+
+  ChangeLanguageState(this.locale);
+}
