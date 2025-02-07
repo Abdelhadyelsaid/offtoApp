@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:offto/Features/Home/Bloc/home_cubit.dart';
 import 'package:offto/Features/Home/View/Widgets/textForm_widget.dart';
@@ -30,7 +31,7 @@ class CitySearchBottomSheet extends StatelessWidget {
                     Text(
                       tr.travelTo,
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
                           color: locationColor),
                     ),

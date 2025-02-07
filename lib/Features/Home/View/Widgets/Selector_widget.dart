@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:offto/Core/Shared%20Cubit/Theme/theme_cubit.dart';
 
 class SelectorWidget extends StatelessWidget {
@@ -49,7 +50,7 @@ class SelectorWidget extends StatelessWidget {
                 Text(
                   selectedText?.isNotEmpty == true ? selectedText! : hintText,
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     color: selectedText?.isNotEmpty == true
                         ? Colors.black
                         : Colors.grey,
@@ -63,7 +64,7 @@ class SelectorWidget extends StatelessWidget {
                     child: Text(
                       hintText,
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
                       ),

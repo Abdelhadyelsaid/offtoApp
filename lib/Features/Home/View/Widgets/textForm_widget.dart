@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DefaultTextFormField extends StatelessWidget {
   final TextEditingController? controller;
@@ -50,12 +51,12 @@ class DefaultTextFormField extends StatelessWidget {
           fillColor: fillcolor,
           prefixIcon: prefixIcon,
           filled: true,
-          suffixStyle: const TextStyle(color: Colors.grey, fontSize: 16),
-          prefixStyle: const TextStyle(color: Colors.grey, fontSize: 16),
+          suffixStyle:  TextStyle(color: Colors.grey, fontSize: 16.sp),
+          prefixStyle:  TextStyle(color: Colors.grey, fontSize: 16.sp),
           hintStyle: TextStyle(
-              color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
+              color: Colors.grey, fontSize: 12.sp, fontWeight: FontWeight.bold),
           labelStyle: TextStyle(
-            fontSize: 16, // Adjust label font size
+            fontSize: 16.sp, // Adjust label font size
             color: Colors.black, // Adjust label color
           ),
           focusedBorder: OutlineInputBorder(

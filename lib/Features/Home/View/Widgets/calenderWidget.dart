@@ -16,7 +16,7 @@ Widget buildMonthCalendar(
         padding: EdgeInsets.symmetric(vertical: 10.h),
         child: Text(
           DateFormat('MMMM yyyy').format(month),
-          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style:  TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
         ),
       ),
       const SizedBox(height: 8),
@@ -100,7 +100,7 @@ Widget buildMonthCalendar(
                 child: Text(
                   day.day.toString(),
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     color: isBetween || cubit.isSameDay(day, now)
                         ? selectedColor
                         : isSelectedDepart || isSelectedArrive

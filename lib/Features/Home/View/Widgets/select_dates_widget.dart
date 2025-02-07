@@ -42,7 +42,7 @@ class DatePickerBottomSheet extends StatelessWidget {
                   Text(
                     tr.travelDates,
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.bold,
                         color: locationColor),
                   ),

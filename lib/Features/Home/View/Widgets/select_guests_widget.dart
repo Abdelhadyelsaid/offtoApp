@@ -29,7 +29,7 @@ class GuestsBottomSheet extends StatelessWidget {
                     Text(
                       tr.passengers_rooms,
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
                     ),
                     IconButton(
                       icon: Icon(Icons.close, color: Colors.grey),

@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                             Text(
                               tr.language,
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                             Text(
                               tr.theme,
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -112,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                       tr.searchTitle,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 22,
+                        fontSize: 22.sp,
                       ),
                     ),
                     SizedBox(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:offto/Core/Const/colors.dart';
 import '../../../../generated/l10n.dart';
 
@@ -21,7 +22,7 @@ class FlightsScreen extends StatelessWidget {
           Center(
             child: Text(
               tr.flightsPage,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.sp),
             ),
           )
         ],

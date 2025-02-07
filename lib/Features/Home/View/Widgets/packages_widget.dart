@@ -32,9 +32,9 @@ class PackagesWidget extends StatelessWidget {
               const SizedBox(width: 8),
               Text(
                 text,
-                style: const TextStyle(
+                style:  TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 16,
+                  fontSize: 16.sp,
                 ),
               ),
             ],
